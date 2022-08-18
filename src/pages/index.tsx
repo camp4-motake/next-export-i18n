@@ -20,6 +20,7 @@ const Home: NextPage = () => {
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
+        <p>test i18n export</p>
         <p>
           <Link href={{ pathname: '/about', query: query }} passHref>
             about
