@@ -1,12 +1,8 @@
 import type { NextPage } from 'next';
 import NextLink from 'next/link';
 import Head from 'next/head';
-import { useLanguageQuery } from 'next-export-i18n';
-import { LangSwitcher } from '../components/LangSwitcher';
 
 const About: NextPage = () => {
-  const [query] = useLanguageQuery();
-
   return (
     <>
       <Head>
@@ -18,11 +14,10 @@ const About: NextPage = () => {
       <main>
         <h1>about</h1>
         <p>
-          <NextLink href={{ pathname: '/', query: query }} passHref>
+          <NextLink href={{ pathname: '/' }} passHref>
             home
           </NextLink>
         </p>
-        <LangSwitcher />
       </main>
     </>
   );

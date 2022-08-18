@@ -1,13 +1,9 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-import { useLanguageQuery } from 'next-export-i18n';
 import styles from '../styles/Home.module.css';
-import { LangSwitcher } from '../components/LangSwitcher';
 
 const Home: NextPage = () => {
-  const [query] = useLanguageQuery();
-
   return (
     <div className={styles.container}>
       <Head>
@@ -20,13 +16,11 @@ const Home: NextPage = () => {
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
-        <p>test i18n export</p>
         <p>
-          <Link href={{ pathname: '/about', query: query }} passHref>
+          <Link href={{ pathname: '/about' }} passHref>
             about
           </Link>
         </p>
-        <LangSwitcher />
       </main>
     </div>
   );
